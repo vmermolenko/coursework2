@@ -1,6 +1,6 @@
 <template>
   <div class="container column">
-    <app-add-block @actionaddblock="addblock"></app-add-block>
+    <app-add-block @actionaddblock="createComponentList"></app-add-block>
     <app-cv-block :componentList="componentList"></app-cv-block>
   </div>
   
@@ -44,14 +44,6 @@ export default {
     this.loadComponentList()
   },
   methods : {
-    async addblock(data){
-      // this.componentList.push({
-      //   type : data.type,
-      //   text : data.text
-      // })
-      await this.createComponentList(data)
-    },
-     
     async createComponentList(data){
       const url = 'https://vue-coursework2-366f4-default-rtdb.firebaseio.com/componentcv.json'
       

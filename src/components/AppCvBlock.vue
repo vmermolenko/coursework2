@@ -1,8 +1,9 @@
 <template>
 	<div class="card card-w70">    
 		<h3 v-if="componentList.length === 0">Добавьте первый блок, чтобы увидеть результат</h3>
-		<component v-else :text="item.text" :is="item.type" v-for="item in componentList" :key="item"></component>     
-		
+		<div v-else >
+			<component :text="item.text" :is="item.type" v-for="item in componentList" :key="item"></component>     
+		</div>		
 	</div>
 	
 </template>
