@@ -53,7 +53,7 @@ export default {
     },
      
     async createComponentList(data){
-      const url = 'https://vue-with-http-35483-default-rtdb.firebaseio.com/componentcv.json'
+      const url = 'https://vue-coursework2-366f4-default-rtdb.firebaseio.com/componentcv.json'
       
       const response = await fetch(url,{ 
         method : 'POST', 
@@ -77,7 +77,7 @@ export default {
       this.loading = true
       try {
         
-        const url = 'https://vue-with-http-35483-default-rtdb.firebaseio.com/componentcv.json'
+        const url = 'https://vue-coursework2-366f4-default-rtdb.firebaseio.com/componentcv.json'
       
         const {data} = await axios.get(url)
         if (!data) {
