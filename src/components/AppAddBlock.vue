@@ -31,11 +31,7 @@
 		},
 		computed : {
       showBtn(){
-				if (this.addText.length > 3) {
-					return false
-				} else {
-					return true
-				}
+				return this.addText.length < 4
 			}
 		},
 		methods : {
